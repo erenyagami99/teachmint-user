@@ -1,0 +1,216 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  flex-direction: column;
+  background-color: black;
+  padding-top: 40px;
+}
+.main-div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+.users {
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  width: 400px;
+  height: 75px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.user-heading {
+  font-size: 20px;
+  color: white;
+}
+@media (min-width: 150px) and (max-width: 400px) {
+  .user-heading {
+    font-size: 10px;
+  }
+}
+
+.pause-button {
+  width: 150px;
+  background: violet;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(232, 232, 253);
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.profile-div {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back-button {
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+.drop-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.drop-down {
+  background-color: #cfe2f3;
+  border: none;
+  border-radius: 5px;
+  padding: 0 8px;
+  color: brown;
+  padding: 0 8px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+.timer {
+  background-color: #090d10;
+  border: none;
+  border-radius: 5px;
+  padding: 0 8px;
+  color: rgb(24, 181, 228);
+  padding: 0 8px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+.address {
+  display: flex;
+  text-align: left;
+  width: 50%;
+  align-items: center;
+}
+.user-details {
+  width: 90%;
+  border-radius: 10px;
+  background-color: #fefeff;
+  padding: 40px 15px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.half {
+  width: 50%;
+}
+.user-details h1 {
+  color: #494871;
+}
+.user-details p {
+  color: #494871;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.user-details span {
+  color: rgb(25, 25, 85);
+  font-weight: bolder;
+  font-size: 25px;
+}
+.user-div {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.posts-div {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  gap: 40px;
+  padding: 20px 0;
+}
+.post-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #ee4d38;
+  text-align: center;
+  color: #494871;
+  font-size: 12px;
+}
+.popup-container {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.popup-div {
+  padding: 20px !important;
+  max-width: 700px;
+  width: 100%;
+  padding: 0 50px;
+  border-right: 25px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
