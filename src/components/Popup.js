@@ -1,7 +1,7 @@
 import React from "react";
 
 const Popup = (props) => {
-  const { setModal } = props;
+  const { setModal, post } = props;
   return (
     <div
       onClick={() => {
@@ -16,14 +16,8 @@ const Popup = (props) => {
         }}
         className="popup-div"
       >
-        <button
-          onClick={(e) => {
-            // e.stopPropagation();
-            setModal(true);
-          }}
-        >
-          Close
-        </button>
+        <h1>{post.title}</h1>
+        <p>{post.body}</p>
       </div>
     </div>
   );

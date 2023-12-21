@@ -15,6 +15,7 @@ const ProfileDetails = () => {
   const timeId = useRef(null);
   const [isTime, setIsTime] = useState(false);
   const [modal, setModal] = useState(false);
+  const [post, setPost] = useState({});
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -47,7 +48,6 @@ const ProfileDetails = () => {
         );
         const data = await response.json();
         setCurrentTime(data.datetime);
-        setCurrentTime(data.datetime);
       } catch (error) {
         console.log("Error fetching time:", error);
       }
@@ -77,8 +77,6 @@ const ProfileDetails = () => {
     setIsTime(false);
     timeRunning();
   };
-
-  console.log(user, "sriniavs");
 
   return (
     <div className="profile-container">
@@ -169,13 +167,13 @@ const ProfileDetails = () => {
             <div
               onClick={() => {
                 setModal(true);
+                setPost(post);
               }}
               className="post-card"
             >
               <h1>
-                {" "}
-                {post.title.length > 20
-                  ? post.title.slice(0, 20) + "..."
+                {post.title.length > 15
+                  ? post.title.slice(0, 15) + "..."
                   : post.title}
               </h1>
               <p>{post.body}</p>
@@ -183,7 +181,7 @@ const ProfileDetails = () => {
           ))}
         </div>
       </div>
-      {modal && <Popup setModal={setModal} />}
+      {modal && <Popup setModal={setModal} post={post} />}
     </div>
   );
 };
