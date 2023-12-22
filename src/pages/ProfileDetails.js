@@ -176,7 +176,11 @@ const ProfileDetails = () => {
                   ? post.title.slice(0, 15) + "..."
                   : post.title}
               </h1>
-              <p>{post.body}</p>
+              <p>
+                {post.body.length > 60
+                  ? post.body.slice(0, 60) + "..."
+                  : post.body}
+              </p>
             </div>
           ))}
         </div>
